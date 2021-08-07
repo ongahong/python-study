@@ -20,7 +20,7 @@ print(f'{s1}\n{s2}\n{s3}\n{s1}\n{s2}\n{s3}')
 
 # 4, 用户输入一个变量name显示到控制台
 name = input('请输入一个name')
-print(name);
+print(name)
 
 # 5，填空题  是0
 a = 10
