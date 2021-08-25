@@ -1,3 +1,4 @@
+import copy
 
 list1 = list()
 
@@ -26,6 +27,7 @@ dict2 = {}
 dict1['name'] = '麦芽'
 dict1['age'] = '30'
 dict1['sex'] = '女'
+dict1['books'] = ['历史','数学']
 print(dict1)
 print(len(dict1))
 
@@ -33,3 +35,16 @@ print(len(dict1))
 set1 = set()
 set1.add(123)
 print(set1)
+
+
+dict2 = copy.deepcopy(dict1)
+dict3 = dict1.copy()
+dict1['birth'] = '1999'
+dict1['books'] = ['历史','数学','政治']
+dict1['books'].append('音乐')
+
+
+print(f'dict1: {dict1}')
+print(f'dict2: {dict2}')
+print(f'dict3: {dict3}')
+
