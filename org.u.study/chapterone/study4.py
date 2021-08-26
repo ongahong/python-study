@@ -18,8 +18,21 @@ dict1['age'] = '18'
 #         print(f'{key}---{value}')
 
 
+
+myLam = lambda a : a * a
+print(myLam(7))
+
 def myDef2(a,b):
     print(f'{a}-{type(a)}-{len(a)}')
     print(f'{b}-{type(b)}-{len(b)}')
+    print(myLam(int(a)))
 
-myDef2('1','12')
+myDef2('5','10')
+
+
+
+
+
+
+
+
