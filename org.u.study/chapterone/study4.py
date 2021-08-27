@@ -28,6 +28,8 @@ def myDef2(a,b):
     print(myLam(int(a)))
 
 myDef2('5','10')
+myDef2(5,10)
+
 
 
 
