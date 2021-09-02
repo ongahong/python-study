@@ -58,35 +58,63 @@
 
 #
 
+#
+# def testKargs(*args):
+#     print(f'testKargs:args:{args}')
+#     return args
+#
+# testKargs(1,2,3,4,5)
 
-def testKargs(*args):
-    print(f'testKargs:args:{args}')
-    return args
+#
+# def outer(func):
+#     def inner(*args):
+#         print(f'start.params:{args};params-type:{type(args)}')
+#         print(f'start.params:{func.__name__}')
+#         func(args)
+#         print(f'end')
+#     return inner
+#
+#
+# @outer
+# def func(*a):
+#     print(f'fun:a:{a}')
+#     tuple1 = a[0]
+#     print(f'fun:tuple1:{tuple1}')
+#     result = 0
+#     for i in tuple1:
+#         print(f'fun:i:{tuple1.index(i)}---{i}')
+#         result += i
+#
+#     print(f'fun:result:{result}')
+#     return result
+#
+# func(1,2,3,4,5)
 
-testKargs(1,2,3,4,5)
 
 
-def outer(func):
-    def inner(*args):
+# def outer2(func):
+#     def inner2(*args,**kwargs):
+#         # print(f'start.params:{args};params-type:{type(args)}')
+#         # print(f'start.params:{func.__name__}')
+#         func(*args,**kwargs)
+#         print(f'end')
+#     return inner2
+#
+# @outer2
+# def func(*args,**kwargs):
+#     print(f'func.args:{args};kwargs:{kwargs}')
+#
+# func(1,2,3,name='maiya',age='18')
+
+
+def outer3():
+    def inner3(*args,**kwargs):
         # print(f'start.params:{args};params-type:{type(args)}')
         # print(f'start.params:{func.__name__}')
-        func(args)
+        funct(*args,**kwargs)
         print(f'end')
-    return inner
+    return inner3
 
-@outer
-def func (*args):
-    print(f'fun:args:{args}')
-    result = 0
-    for i in args:
-        #print(f'fun:i:{args.index(i)}---{i}')
-        result += i
+funct = lambda *args,**kwargs: print(f'args:{args};kwargs:{kwargs}')
 
-    print(f'fun:result:{result}')
-    return result
-
-func(1,2,3,4,5)
-
-
-
-
+print()
