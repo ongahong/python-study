@@ -7,9 +7,9 @@ class study:
 
     def __init__(self,name,sex,age):
         print(self)
-        name = name
-        age = age
-        sex = sex
+        self.name = name
+        self.age = age
+        self.sex = sex
 
     # def __str__(self):
     #     print(self)
