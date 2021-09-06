@@ -15,6 +15,7 @@ class study:
     #     print(self)
 
     def getUser(self):
+        print(f'{self.name}')
         print('111111')
         return 0
 
